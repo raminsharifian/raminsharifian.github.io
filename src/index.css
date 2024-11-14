@@ -1,0 +1,18 @@
+body {
+  padding: 2rem;
+  margin: auto;
+  max-width: 768px;
+}
+
+h6 {
+  margin-bottom: 1rem !important;
+}
+
+p {
+  margin-top: 0.5rem !important;
+}
+
+.fade {
+  font-weight: 400;
+  color: #727272;
+}
