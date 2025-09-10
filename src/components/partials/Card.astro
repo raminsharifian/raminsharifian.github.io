@@ -1,0 +1,14 @@
+---
+import { Card } from "@/components/ui/card";
+---
+
+<Card className="gap-0 p-4 card">
+  <slot />
+</Card>
+
+<style>
+  .card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(1rem);
+  }
+</style>

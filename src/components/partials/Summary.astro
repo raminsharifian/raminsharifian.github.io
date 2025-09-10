@@ -1,0 +1,130 @@
+---
+import Card from "@/components/partials/Card.astro";
+
+import { Badge } from "@/components/ui/badge";
+import { RESUME } from "@/constants/data";
+
+import { ModeToggle } from "@/components/ModeToggle";
+---
+
+<Card>
+  <div class="p-2 flex flex-col gap-2">
+    <div>
+      <h3
+        class="scroll-m-20 text-2xl font-semibold tracking-tight mt-1 flex flex-row gap-5 w-full justify-between"
+      >
+        Professional Summary
+        <ModeToggle client:load />
+      </h3>
+      <p class="leading-7 [&:not(:first-child)]:mt-6">
+        {RESUME.summary}
+      </p>
+    </div>
+
+    <div class="mt-5">
+      <Card>
+        <h4
+          class="scroll-m-20 text-xl font-semibold tracking-tight flex flex-row items-center gap-2.5"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            >
+              <path
+                d="M20 15c0 1.864 0 2.796-.304 3.53a4 4 0 0 1-2.165 2.165C16.796 21 15.864 21 14 21h-3c-3.772 0-5.658 0-6.83-1.172C3 18.657 3 16.771 3 13V7a4 4 0 0 1 4-4"
+              ></path>
+              <path
+                d="m10 8.5l.434 3.969a.94.94 0 0 0 .552.753c.686.295 1.971.778 3.014.778s2.328-.483 3.014-.778a.94.94 0 0 0 .553-.753L18 8.5m2.5-1v3.77M14 4L7 7l7 3l7-3z"
+              ></path>
+            </g>
+          </svg>
+          Educational Contents
+        </h4>
+        <p class="leading-7 [&:not(:first-child)]:mt-6">
+          Currently focused on producing advanced educational content in the
+          form of comprehensive courses in:
+        </p>
+        <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
+          {RESUME.courses.map((course) => <li>{course}</li>)}
+        </ul>
+        <p class="leading-7 [&:not(:first-child)]:mt-2">
+          Interested in collaborating in dynamic environments and attracting
+          creative audiences to share knowledge and experiences.
+        </p>
+      </Card>
+    </div>
+
+    <div>
+      <div>
+        <h4
+          class="scroll-m-20 text-xl font-semibold tracking-tight mt-5 flex flex-row items-center gap-2.5"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7 8.38h4.5m5.5 0h-2.5m-3 0h3m-3 0V7m3 1.38c-.527 1.886-1.632 3.669-2.893 5.236M8.393 17c1.019-.937 2.17-2.087 3.214-3.384m0 0c-.643-.754-1.543-1.973-1.8-2.525m1.8 2.525l1.929 2.005"
+              ></path>
+            </g>
+          </svg>
+          Languages
+        </h4>
+        <div class="flex flex-row w-full flex-wrap gap-2.5 py-5">
+          {
+            RESUME.langs.map((lang) => (
+              <Badge variant="secondary">{lang}</Badge>
+            ))
+          }
+        </div>
+      </div>
+      <hr class="mb-4" />
+      <div>
+        <h4
+          class="scroll-m-20 text-xl font-semibold tracking-tight flex flex-row items-center gap-2.5"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2 12c0 1.052.18 2.062.512 3m10.502-6h8.488M11 15H2.512m18.99-6a9 9 0 0 0-8.488-6c1.6 0 2.909 3.762 2.995 8.5M21.502 9c.278.789.45 1.628.498 2.5M2.512 15A9 9 0 0 0 11 21c-1.544 0-2.816-3.5-2.982-8"
+              ></path>
+              <path
+                d="M2 5.297C2 4.2 2 3.65 2.187 3.224c.2-.452.542-.815.968-1.025C3.557 2 4.075 2 5.11 2H6c1.886 0 2.828 0 3.414.62C10 3.243 10 4.24 10 6.24v2.259c0 .871 0 1.307-.264 1.457s-.606-.092-1.29-.576l-.105-.073c-.5-.354-.75-.53-1.034-.621c-.283-.091-.584-.091-1.185-.091h-1.01c-1.037 0-1.555 0-1.957-.199a2.06 2.06 0 0 1-.968-1.025C2 6.945 2 6.396 2 5.297Zm20 12c0-1.098 0-1.647-.187-2.073a2.06 2.06 0 0 0-.968-1.025C20.443 14 19.925 14 18.89 14H18c-1.886 0-2.828 0-3.414.62C14 15.243 14 16.24 14 18.24v2.259c0 .871 0 1.307.264 1.457s.606-.092 1.29-.576l.105-.073c.5-.354.75-.53 1.034-.621c.283-.091.584-.091 1.185-.091h1.01c1.037 0 1.555 0 1.957-.199c.426-.21.769-.573.968-1.025c.187-.426.187-.975.187-2.074Z"
+              ></path>
+            </g>
+          </svg>
+          Skills
+        </h4>
+        <div class="flex flex-row w-full flex-wrap gap-2.5 pt-5">
+          {
+            RESUME.skills.map((skill) => (
+              <Badge variant="secondary">{skill}</Badge>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</Card>
