@@ -8,7 +8,16 @@ import { app } from "@/configs/app";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="theme-color" content="#000" />
+    <meta
+      name="theme-color"
+      content="#000"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#000"
+      media="(prefers-color-scheme: dark)"
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={app.description} />
