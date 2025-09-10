@@ -9,7 +9,7 @@ import Telegram from "@/components/partials/icons/Telegram.astro";
 ---
 
 <header
-  class="header flex flex-col items-center justify-center gap-2.5 px-5 pb-3 sm:pb-8 pt-12"
+  class="header flex flex-col items-center justify-center gap-2.5 px-5 pb-8 pt-12"
   id="header"
 >
   <!-- Header title -->
@@ -45,11 +45,15 @@ import Telegram from "@/components/partials/icons/Telegram.astro";
 </header>
 
 <style>
-  h1 {
-    background: linear-gradient(90deg, #00dbde, #fc00ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 25rem;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, black, transparent);
   }
   button {
     padding-inline: 0.6rem;

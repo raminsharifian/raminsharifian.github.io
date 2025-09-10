@@ -6,20 +6,20 @@ import { CONTRIBUTIONS } from "@/constants/data";
 
 <Card>
   <div class="p-2 flex flex-col gap-2">
+    <!-- Header -->
     <div>
       <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight mt-1">
-        Contributions
+        {CONTRIBUTIONS.title}
       </h3>
       <p class="leading-7 [&:not(:first-child)]:mt-6">
-        Cover art for the Journal of Biological Chemistry (JBC) visualizing
-        antibiotic-resistant pathogens:
+        {CONTRIBUTIONS.about}
       </p>
     </div>
-
+    <!-- Body -->
     <div>
       <div>
         <h4
-          class="scroll-m-20 text-xl font-semibold tracking-tight mt-5 flex flex-row items-center gap-2.5"
+          class="scroll-m-20 text-xl font-semibold tracking-tight mt-5 flex flex-row gap-2.5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,69 +42,21 @@ import { CONTRIBUTIONS } from "@/constants/data";
               ></path>
             </g>
           </svg>
-          April 2025 | Volume 301, Issue 4 | Open Access
+          {CONTRIBUTIONS.date}
         </h4>
         <blockquote class="mt-6 border-l-2 pl-6 italic">
-          This 3D visualization helps biochemists better understand the
-          structure of antibiotic-resistant bacteria, contributing to scientific
-          communication in the field of biochemical science.
+          {CONTRIBUTIONS.blockquote}
         </blockquote>
-        <a href={CONTRIBUTIONS.cover.img} target="_blank">
-          <img
-            src={CONTRIBUTIONS.cover.img}
-            alt={CONTRIBUTIONS.cover.alt}
-            class="sm:h-100 w-full mt-5 rounded-2xl border object-contain"
-          />
-        </a>
         <p class="leading-7 [&:not(:first-child)]:mt-6">
-          On the Cover: Depicted are the outer and inner membranes of the common
-          antibiotic resistant pathogen P. aeruginosa. (Out of focus P.
-          aeruginosa (brown) is featured in the background). AlphaFold
-          predictions decorate the two membranes. In green is the outer membrane
-          lipoprotein YaiW. The article discovers that YaiW helps transfer the
-          bactericidal fragment (blue) of the tear, plasma, cerebral spinal
-          fluid and salivary protein lacritin across the outer membrane into the
-          periplasm, the region between both membranes. The article also
-          discovers that the fragment then binds the inner membrane ferrous iron
-          transporter FeoB (red) to inhibit ferrous iron (red spheres) uptake
-          into the cytoplasm. The fragment also binds one subunit of the inner
-          membrane spermidine/putrescine transporter (orange, purple, aqua).
-          This inhibits spermidine and putrescine (black/blue) uptake. The
-          lacritin fragment kills the PA14 pathogenic strain of P. aeruginosa
-          and clinical isolates. P. aeruginosa failed to develop resistance
-          against it.
-        </p>
-        <div class="mt-4 flex flex-row gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-            >
-              <path
-                d="M14 21.5h-4c-3.288 0-4.931 0-6.038-.908a4 4 0 0 1-.554-.554C2.5 18.93 2.5 17.288 2.5 14c0-3.287 0-4.931.908-6.038a4 4 0 0 1 .554-.554C5.07 6.5 6.712 6.5 10 6.5h4c3.287 0 4.931 0 6.038.908q.304.25.554.554c.908 1.107.908 2.75.908 6.038s0 4.931-.908 6.038a4 4 0 0 1-.554.554c-1.107.908-2.75.908-6.038.908"
-              ></path>
-              <path
-                d="M2.5 14.5v-4c0-3.771 0-5.657 1.172-6.828S6.729 2.5 10.5 2.5h3c3.771 0 5.657 0 6.828 1.172S21.5 6.729 21.5 10.5v4"
-              ></path>
-              <path d="M15 13.5s-2.21-3-3-3s-3 3-3 3m3-2.5v6.5"></path>
-            </g>
-          </svg>
-          Published in: <a
-            href={CONTRIBUTIONS.cover.link}
+          {CONTRIBUTIONS.description}
+          <a
+            href={CONTRIBUTIONS.link}
             target="_blank"
             class="text-cyan-400 hover:underline"
           >
-            Journal of Biological Chemistry
+            Read more
           </a>
-        </div>
+        </p>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@ export const RESUME = {
   summary:
     "Software Developer and Computer Graphic Designer with " +
     (new Date().getFullYear() - 2017) +
-    "+ years of experience in the creative and technology industry. Specialized in digital branding and magazine graphic design, with professional software development experience since 2017. Experience teaching software engineering and artificial intelligence, with proven ability to lead energetic teams and successfully complete international projects (including collaboration with the University of Virginia on the JBC journal design project). Also experienced in sales and support of digital products.",
+    "+ years of experience in the creative and technology industry. Specialized in digital branding and magazine graphic design, with professional software development experience since 2019. Experience teaching software engineering and artificial intelligence, with proven ability to lead energetic teams and successfully complete international projects (including collaboration with the University of Virginia on the JBC journal design project). Also experienced in sales and support of digital products.",
   langs: ["Persian (Native)", "English", "Russian"],
   skills: [
     "Programming",
@@ -32,14 +32,21 @@ export const RESUME = {
   ],
 };
 export const CONTRIBUTIONS = {
-  cover: {
-    img: "/jbc-cover-art.jpg",
-    alt: "JBC Cover Art",
-    link: "https://www.jbc.org/issue/S0021-9258(25)X0004-1",
-  },
+  title: "Contributions",
+  about:
+    "Cover art for the Journal of Biological Chemistry (JBC) visualizing antibiotic-resistant pathogens:",
+  date: "April 2025 | Volume 301, Issue 4 | Open Access",
+  link: "https://www.jbc.org/issue/S0021-9258(25)X0004-1",
+  blockquote:
+    "This 3D visualization helps biochemists better understand the structure of antibiotic-resistant bacteria, contributing to scientific communication in the field of biochemical science.",
+  description:
+    "On the Cover: Depicted are the outer and inner membranes of the common antibiotic resistant pathogen P. aeruginosa. (Out of focus P. aeruginosa (brown) is featured in the background). AlphaFold predictions decorate the two membranes. In green is the outer membrane lipoprotein YaiW...",
 };
 export const PROJECTS = {
+  title: "Projects",
   shecan: {
+    about:
+      "Shecan DNS Config for Linux (One-command setup for better internet access). A Bash script to configure systemd-resolved to use Shecan DNS servers on systemd-based Linux systems...",
     link: "https://raminsharifian.github.io/shecan",
     prerequisites: [
       "System running systemd (most modern Linux distributions)",
