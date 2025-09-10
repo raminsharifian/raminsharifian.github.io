@@ -38,3 +38,15 @@ export const CONTRIBUTIONS = {
     link: "https://www.jbc.org/issue/S0021-9258(25)X0004-1",
   },
 };
+export const PROJECTS = {
+  shecan: {
+    link: "https://raminsharifian.github.io/shecan",
+    prerequisites: [
+      "System running systemd (most modern Linux distributions)",
+      "systemd-resolved service active and running",
+      "Root/sudo privileges",
+    ],
+    contributing:
+      "Feel free to submit issues and enhancement requests through the GitHub repository.",
+  },
+};

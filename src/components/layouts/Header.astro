@@ -1,9 +1,15 @@
 ---
 import { SITE_NAME, SITE_DESCRIPTION } from "@/constants/data";
+
+import { Button } from "@/components/ui/button";
+
+import Email from "@/components/partials/icons/Email.astro";
+import GitHub from "@/components/partials/icons/GitHub.astro";
+import Telegram from "@/components/partials/icons/Telegram.astro";
 ---
 
 <header
-  class="header flex flex-col items-center justify-center gap-2.5 px-5 pb-10 pt-12"
+  class="header flex flex-col items-center justify-center gap-2.5 px-5 pb-3 sm:pb-8 pt-12"
   id="header"
 >
   <!-- Header title -->
@@ -16,6 +22,26 @@ import { SITE_NAME, SITE_DESCRIPTION } from "@/constants/data";
   <h2 class="scroll-m-20 text-center pt-2 text-xl tracking-tight first:mt-0">
     {SITE_DESCRIPTION}
   </h2>
+  <div class="flex flex-row items-center justify-center gap-2.5 mt-2">
+    <Button variant="outline">
+      <a href="mailto:raminsharifian.business@gmail.com">
+        <Email />
+        E-mail
+      </a>
+    </Button>
+    <Button variant="outline">
+      <a href="https://github.com/raminsharifian">
+        <GitHub />
+        GitHub
+      </a>
+    </Button>
+    <Button variant="outline">
+      <a href="tg://resolve?domain=SharifianBot">
+        <Telegram />
+        Telegram
+      </a>
+    </Button>
+  </div>
 </header>
 
 <style>
@@ -24,5 +50,27 @@ import { SITE_NAME, SITE_DESCRIPTION } from "@/constants/data";
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+  button {
+    padding-inline: 0.6rem;
+    backdrop-filter: blur(0.5rem);
+  }
+  a {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
   }
 </style>

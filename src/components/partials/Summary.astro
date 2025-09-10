@@ -3,18 +3,13 @@ import Card from "@/components/partials/Card.astro";
 
 import { Badge } from "@/components/ui/badge";
 import { RESUME } from "@/constants/data";
-
-import { ModeToggle } from "@/components/ModeToggle";
 ---
 
 <Card>
   <div class="p-2 flex flex-col gap-2">
     <div>
-      <h3
-        class="scroll-m-20 text-2xl font-semibold tracking-tight mt-1 flex flex-row gap-5 w-full justify-between"
-      >
+      <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight mt-1">
         Professional Summary
-        <ModeToggle client:load />
       </h3>
       <p class="leading-7 [&:not(:first-child)]:mt-6">
         {RESUME.summary}

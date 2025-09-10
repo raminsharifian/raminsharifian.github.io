@@ -1,0 +1,111 @@
+---
+import Card from "@/components/partials/Card.astro";
+import { PROJECTS } from "@/constants/data";
+---
+
+<Card>
+  <div class="p-2 flex flex-col gap-2">
+    <div>
+      <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight mt-1">
+        Projects
+      </h3>
+      <p class="leading-7 [&:not(:first-child)]:mt-6">
+        Shecan DNS Config for Linux (One-command setup for better internet
+        access). A Bash script to configure systemd-resolved to use Shecan DNS
+        servers on systemd-based Linux systems.
+      </p>
+    </div>
+
+    <div>
+      <h4
+        class="scroll-m-20 text-xl font-semibold tracking-tight mt-5 flex flex-row items-center gap-2.5"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <g fill="none" stroke="currentColor" stroke-width="1">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M8.5 15.5h7m-7-5H12M10.5 3q-.337.016-.67.037c-4.184.279-7.516 3.664-7.79 7.914a20 20 0 0 0 0 2.525c.1 1.548.783 2.98 1.588 4.19c.467.848.159 1.906-.328 2.83c-.35.665-.526.998-.385 1.239c.14.24.455.248 1.084.263c1.245.03 2.084-.323 2.75-.815c.377-.279.566-.418.696-.434s.387.09.899.3c.46.19.995.308 1.485.34c1.425.095 2.914.096 4.342 0c4.183-.278 7.515-3.663 7.789-7.913a20 20 0 0 0 0-2.525q-.032-.484-.114-.951"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17.5 5h.009"></path>
+            <path
+              stroke-width="1.5"
+              d="M21.795 4.59c.137.183.205.275.205.41s-.068.227-.205.41C21.18 6.23 19.61 8 17.5 8s-3.68-1.77-4.295-2.59C13.068 5.226 13 5.134 13 5s.068-.227.205-.41C13.82 3.77 15.39 2 17.5 2s3.68 1.77 4.295 2.59Z"
+            ></path>
+          </g>
+        </svg>
+        Live Preview
+      </h4>
+      <a href={PROJECTS.shecan.link} target="_blank">
+        <iframe src={PROJECTS.shecan.link} class="rounded-2xl w-full h-100 mt-5"
+        ></iframe>
+      </a>
+    </div>
+
+    <div>
+      <h4
+        class="scroll-m-20 text-xl font-semibold tracking-tight mt-5 flex flex-row items-center gap-2.5"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="1.5"
+          >
+            <path
+              stroke-linejoin="round"
+              d="M11 16.5s1.5.5 2.25 2.5c0 0 3.573-5.833 6.75-7"></path>
+            <path d="M4 5h14M4 10h11M4 15h4"></path>
+          </g>
+        </svg>
+        Prerequisites
+      </h4>
+      <ul class="mt-4 mb-3 ml-6 list-disc [&>li]:mt-2">
+        {PROJECTS.shecan.prerequisites.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+
+    <hr />
+    <div>
+      <h4
+        class="scroll-m-20 text-xl font-semibold tracking-tight mt-3 flex flex-row items-center gap-2.5"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M6.517 17.113c.395.578 1.592 1.81 3.225 2.12M9.864 22C8.836 21.83 2 19.606 2 12.093C2 5.063 8.002 2 12 2c4 0 10 3.063 10 10.093c0 7.513-6.836 9.738-7.864 9.907c0 0-.21-3.417-.087-4.003c.122-.586-.294-1.528-.294-1.528c.971-.364 2.45-.884 2.945-2.282c.385-1.084.627-2.658-.45-4.138c0 0 .282-2.39-.25-2.484c-.533-.092-2.1.947-2.1.947c-.457-.13-1.476-.377-1.898-.333c-.423-.044-1.445.203-1.902.333c0 0-1.568-1.04-2.1-.947s-.25 2.484-.25 2.484c-1.077 1.48-.835 3.054-.45 4.138c.496 1.398 1.974 1.918 2.945 2.282c0 0-.416.942-.294 1.528S9.864 22 9.864 22"
+          ></path>
+        </svg>
+        Contributing
+      </h4>
+      <p class="leading-7 [&:not(:first-child)]:mt-3">
+        {PROJECTS.shecan.contributing}
+      </p>
+    </div>
+  </div>
+</Card>
