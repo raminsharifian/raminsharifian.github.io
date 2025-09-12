@@ -5,23 +5,14 @@ import { app } from "@/configs/app";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="theme-color"
-      content="#000"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#000"
-      media="(prefers-color-scheme: dark)"
-    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={app.description} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#000" />
     <title>{app.name}</title>
   </head>
   <body>

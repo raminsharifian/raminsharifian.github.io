@@ -1,14 +1,14 @@
 ---
-import Card from "@/components/partials/Card.astro";
+import Section from "@/components/partials/Section.astro";
 
 import { app } from "@/configs/app";
 ---
 
 <footer class="footer my-5" id="footer">
-  <Card>
+  <Section>
     <div class="text-center text-sm">
       &copy; {new Date().getFullYear()}
       {" " + app.name}, All rights reserved.
     </div>
-  </Card>
+  </Section>
 </footer>

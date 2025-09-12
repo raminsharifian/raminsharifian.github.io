@@ -1,11 +1,11 @@
 ---
-import Card from "@/components/partials/Card.astro";
+import Section from "@/components/partials/Section.astro";
 
 import { Badge } from "@/components/ui/badge";
 import { RESUME } from "@/constants/data";
 ---
 
-<Card>
+<Section>
   <div class="p-2 flex flex-col gap-2">
     <div>
       <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight mt-1">
@@ -17,7 +17,7 @@ import { RESUME } from "@/constants/data";
     </div>
 
     <div class="mt-5">
-      <Card>
+      <Section>
         <h4
           class="scroll-m-20 text-xl font-semibold tracking-tight flex flex-row items-center gap-2.5"
         >
@@ -55,7 +55,7 @@ import { RESUME } from "@/constants/data";
           Interested in collaborating in dynamic environments and attracting
           creative audiences to share knowledge and experiences.
         </p>
-      </Card>
+      </Section>
     </div>
 
     <div>
@@ -122,4 +122,4 @@ import { RESUME } from "@/constants/data";
       </div>
     </div>
   </div>
-</Card>
+</Section>
